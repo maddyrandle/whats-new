@@ -3,7 +3,6 @@ import NewsArticle from '../NewsArticle/NewsArticle'
 import './NewsContainer.css'
 
 const NewsContainer = (articles) => {
-  console.log(articles);
   return (
     articles.local.map(article => {
       return (
