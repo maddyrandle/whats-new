@@ -1,13 +1,19 @@
 import React from 'react';
-import NewsArticle from '../NewsArticle/NewsArticle'
+import NewsArticle from '../NewsArticle/NewsArticle';
 import './NewsContainer.css'
 
-const NewsContainer = (articles) => {
+const NewsContainer = ({ articles }) => {
   return (
-    articles.local.map(article => {
+    articles.map(article => {
       return (
         <article>
-          <NewsArticle article= { article }/>
+          <NewsArticle
+            key = { article.id }
+            headline = { article.headline }
+            img = { article.img }
+            description = { article.description }
+            url = { article.url }
+          />
         </article>
       )
     })
