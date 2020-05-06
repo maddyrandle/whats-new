@@ -1,8 +1,10 @@
 import React from 'react';
 import './NewsArticle.css';
 
-const NewsArticle = (props) => {
-  
+const NewsArticle = (article) => {
+  return (
+    
+  )
 }
 
 export default NewsArticle;
