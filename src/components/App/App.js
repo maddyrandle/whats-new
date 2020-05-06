@@ -16,6 +16,7 @@ class App extends Component {
       <div className="app">
         YOUR CODE GOES HERE!
         <NewsContainer local={ this.state.local }/>
+        // passing down my state as props with "local"
       </div>
     );
   }
