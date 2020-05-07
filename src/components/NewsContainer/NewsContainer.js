@@ -1,5 +1,6 @@
 import React from 'react';
 import NewsArticle from '../NewsArticle/NewsArticle';
+import PropTypes from 'prop-types';
 import './NewsContainer.css'
 
 const NewsContainer = ({ articles }) => {
@@ -19,3 +20,7 @@ const NewsContainer = ({ articles }) => {
 }
 
 export default NewsContainer;
+
+NewsContainer.propTypes = {
+  props: PropTypes.array
+};

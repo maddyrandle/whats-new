@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewsContainer from '../NewsContainer/NewsContainer'
+import SearchForm from '../SearchForm/SearchForm'
 import Menu from '../Menu/Menu';
 import local from '../../data/local';
 import entertainment from '../../data/entertainment';
@@ -22,8 +23,17 @@ class App extends Component {
     }
   }
 
-  updateState = (page) => {
-    this.setState({ currentPage: this.state[page] });
+  updateState = (category) => {
+    this.setState({ currentPage: this.state[category] });
+  }
+
+  getFilteredNews = (e, searchInput) => {
+    e.preventDefault();
+
+    const filteredNews = this.state.currentPage.filter(article => {
+      return article.headline.toLowerCase().includes(searchInput.toLowerCase()) || article.description.toLowerCase().includes(searchInput.toLowerCase())
+    })
+    this.setState({ currentPage: filteredNews })
   }
 
   render () {
@@ -31,10 +41,7 @@ class App extends Component {
       <main className="app">
         <section className="header">
           <h1>What's <span>New?</span></h1>
-          <form className="search-form">
-            <input className="search-input"/>
-            <button className="search-button">search</button>
-          </form>
+          <SearchForm getFilteredNews={ this.getFilteredNews }/>
         </section>
         <section className="menu">
           <Menu updateState={ this.updateState }/>
