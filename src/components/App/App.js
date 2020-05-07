@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NewsContainer from '../NewsContainer/NewsContainer'
+import SearchForm from '../SearchForm/SearchForm'
 import Menu from '../Menu/Menu';
 import local from '../../data/local';
 import entertainment from '../../data/entertainment';
@@ -31,10 +32,7 @@ class App extends Component {
       <main className="app">
         <section className="header">
           <h1>What's <span>New?</span></h1>
-          <form className="search-form">
-            <input className="search-input"/>
-            <button className="search-button">search</button>
-          </form>
+          <SearchForm searchInput={ this.updateState }/>
         </section>
         <section className="menu">
           <Menu updateState={ this.updateState }/>
