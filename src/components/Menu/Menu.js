@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Menu.css'
 
 const Menu = (props) => {
@@ -28,3 +29,7 @@ const Menu = (props) => {
 }
 
 export default Menu;
+
+Menu.propTypes = {
+  props: PropTypes.func
+};
