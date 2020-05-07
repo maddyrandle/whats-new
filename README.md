@@ -15,7 +15,7 @@ The project focuses on building out simple React components and passing data dow
 4. Open localhost:3000 in your favorite browser (unless your terminal says otherwise)
 
 ## App Screenshot
-![App Screenshot](https://i.postimg.cc/hPrpXMw7/Screen-Shot-2020-05-07-at-4-55-02-PM.png)
+![App Screenshot](https://i.postimg.cc/7hBJkCsb/Screen-Shot-2020-05-07-at-4-58-14-PM.png)
 
 
 ## Project Next Steps
