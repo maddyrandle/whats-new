@@ -23,8 +23,17 @@ class App extends Component {
     }
   }
 
-  updateState = (page) => {
-    this.setState({ currentPage: this.state[page] });
+  updateState = (category) => {
+    this.setState({ currentPage: this.state[category] });
+  }
+
+  getFilteredNews = (e, searchInput) => {
+    e.preventDefault();
+
+    const filteredNews = this.state.currentPage.filter(article => {
+      return article.headline.toLowerCase().includes(searchInput.toLowerCase()) || article.description.toLowerCase().includes(searchInput.toLowerCase())
+    })
+    this.setState({ currentPage: filteredNews })
   }
 
   render () {
@@ -32,7 +41,7 @@ class App extends Component {
       <main className="app">
         <section className="header">
           <h1>What's <span>New?</span></h1>
-          <SearchForm searchInput={ this.updateState }/>
+          <SearchForm getFilteredNews={ this.getFilteredNews }/>
         </section>
         <section className="menu">
           <Menu updateState={ this.updateState }/>
