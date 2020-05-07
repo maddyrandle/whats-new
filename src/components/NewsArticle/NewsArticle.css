@@ -9,6 +9,9 @@ img {
   display: grid;
   grid-gap: 1rem;
   text-align: center;
-
   width: 22rem;
+}
+
+a {
+  padding: 1rem;
 }
