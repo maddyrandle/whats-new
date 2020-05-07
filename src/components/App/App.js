@@ -29,8 +29,17 @@ class App extends Component {
   render () {
     return (
       <main className="app">
-        <Menu updateState={ this.updateState }/>
-        <section>
+        <section className="header">
+          <h1>What's <span>New?</span></h1>
+          <form className="search-form">
+            <input className="search-input"/>
+            <button className="search-button">search</button>
+          </form>
+        </section>
+        <section className="menu">
+          <Menu updateState={ this.updateState }/>
+        </section>
+        <section className="articles">
           <NewsContainer articles={ this.state.currentPage }/>
         </section>
       </main>

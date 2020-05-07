@@ -1,0 +1,14 @@
+img {
+  height: auto;
+  width: 100%;
+}
+
+.news-article {
+  background-color: white;
+  color: black;
+  display: grid;
+  grid-gap: 1rem;
+  text-align: center;
+
+  width: 22rem;
+}

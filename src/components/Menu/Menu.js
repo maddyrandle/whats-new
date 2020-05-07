@@ -8,19 +8,19 @@ const Menu = (props) => {
 
   return (
     <nav className="menu">
-      <button name="local" onClick={ getPageName }>
+      <button name="local" className="menu-button" onClick={ getPageName }>
         Local
       </button>
-      <button name="entertainment" onClick={ getPageName }>
+      <button name="entertainment" className="menu-button" onClick={ getPageName }>
         Entertainment
       </button>
-      <button name="health" onClick={ getPageName }>
+      <button name="health" className="menu-button" onClick={ getPageName }>
         Health
       </button>
-      <button name="science" onClick={ getPageName }>
+      <button name="science" className="menu-button" onClick={ getPageName }>
         Science
       </button>
-      <button name="technology" onClick={ getPageName }>
+      <button name="technology" className="menu-button" onClick={ getPageName }>
         Technology
       </button>
     </nav>
