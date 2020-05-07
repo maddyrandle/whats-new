@@ -5,9 +5,73 @@
 }
 
 .app {
+  background-color: #141527;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-areas:
+  "header header header"
+  "menu articles articles";
+  height: auto;
+}
+
+span {
+  color: #ffae01;
+}
+
+button {
+  background-color: #141527;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 3rem;
+  padding: .5rem;
+}
+
+button:hover {
+  background-color: #ffae01;
+  cursor: pointer;
+}
+
+.header {
+  align-items: center;
+  border-bottom: .01rem solid #ffae01;
   display: flex;
-  background: #141527;
-  height: 100vh;
-  text-align: center;
-  width: 100%;
+  grid-area: header;
+  justify-content: space-between;
+  padding: 1rem 20rem 1rem 5rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.search-form {
+  align-items: center;
+  display: flex;
+
+}
+
+.search-input {
+  font-size: 1.5rem;
+  height: 3rem;
+  margin-right: 1rem;
+  padding: .8rem;
+  width: 40rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  grid-area: menu;
+  margin: .5rem .5rem 0 .5rem;
+}
+
+.articles {
+  display: grid;
+  grid-area: articles;
+  grid-gap: .5rem;
+  grid-template-columns: repeat(auto-fill, minmax(345px, 1fr));
+  padding: 1rem;
 }
