@@ -13,8 +13,6 @@ class SearchForm extends Component {
     this.setState({ searchInput: e.target.value })
   }
 
-
-
   render () {
     return (
       <form className="search-form">
