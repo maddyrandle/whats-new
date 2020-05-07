@@ -11,8 +11,9 @@ class SearchForm extends Component {
 
   setSearchInput = (e) => {
     this.setState({ searchInput: e.target.value })
-    console.log('DUUUU', this.state);
   }
+
+
 
   render () {
     return (
@@ -24,8 +25,7 @@ class SearchForm extends Component {
         placeholder="search news articles"
         onChange={ (e) => this.setSearchInput(e) }
         />
-
-        <button className="search-button">search</button>
+        <button className="search-button" onClick={  (e) => this.props.getFilteredNews(e, this.state.searchInput) }>search</button>
       </form>
     )
   }
